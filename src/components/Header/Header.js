@@ -7,11 +7,11 @@ const Header = () => {
       <div className="header-title-logo">
         Touch Typing <span>by Shubham</span>
       </div>
-      <div>
+      <div className="header-user-input-email">
         <button className="header-main-input-button" type="button">
           Submit your text
         </button>
-        <IoIosMail />
+        <IoIosMail className="header-mail-icon"/>
       </div>
     </div>
   );

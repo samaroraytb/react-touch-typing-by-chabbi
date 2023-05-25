@@ -1,10 +1,12 @@
 .main-header-container{
     background-color: #c2185b;
-    padding: 20px 15px 20px 15px;
+    padding: 5px 10px 5px 10px;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .header-title-logo{
@@ -18,4 +20,44 @@
 
 .header-main-input-button{
     background-color: white;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.header-user-input-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header-mail-icon{
+    height: 40px;
+    width: 70px;
+}
+
+@media all and (max-width: 768px){
+    .header-title-logo{
+        font-size: 20px;
+    }
+    .header-main-input-button{
+        border-radius: 10px;
+    }
+    .header-mail-icon{
+        height: 30px;
+        width: 50px;
+    }
+    .main-header-container{
+        padding: 10px 20px 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-title-logo{
+        margin-bottom: 20px;
+    }
 }

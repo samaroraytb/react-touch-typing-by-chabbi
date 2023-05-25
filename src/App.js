@@ -1,11 +1,14 @@
 import Header from "./components/Header/Header";
+import Body from './components/Body/Body'
+import { Provider } from 'react-redux';
+import Store from "./redux/store";
 
 const App = () => {
   return (
-    <div>
+    <Provider store={Store}>
       <Header />
-      <div>Hello Touch Typing App.js</div>
-    </div>
+      <Body />
+    </Provider>
   )
 };
 

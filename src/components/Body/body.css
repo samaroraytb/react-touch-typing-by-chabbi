@@ -1,0 +1,29 @@
+.body-main-container {
+    padding: 20px;
+}
+
+.inside-container-body {
+    border: 15px solid #2a96c8;
+    min-height: 80vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #9f9f9f;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #9f9f9f;
+    text-align: justify;
+    overflow: auto;
+}
+.demo-data-body{
+    margin-bottom: 15px;
+}
+
+.body-user-input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    box-shadow: 1px 1px 5px grey;
+    border: none;
+    border-radius: 8px;
+}
