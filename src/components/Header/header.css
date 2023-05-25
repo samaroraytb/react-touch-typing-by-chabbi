@@ -1,0 +1,21 @@
+.main-header-container{
+    background-color: #c2185b;
+    padding: 20px 15px 20px 15px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-title-logo{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-title-logo span{
+    font-weight: 700;
+}
+
+.header-main-input-button{
+    background-color: white;
+}
