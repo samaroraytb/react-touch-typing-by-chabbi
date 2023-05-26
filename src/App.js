@@ -1,15 +1,16 @@
-import Header from "./components/Header/Header";
-import Body from './components/Body/Body'
-import { Provider } from 'react-redux';
-import Store from "./redux/store";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Body from "./components/Body/Body";
+import CustomText from './components/customText/CustomText'
 
 const App = () => {
   return (
-    <Provider store={Store}>
-      <Header />
-      <Body />
-    </Provider>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Body /> } />
+        <Route path="custom-text" element={<CustomText />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

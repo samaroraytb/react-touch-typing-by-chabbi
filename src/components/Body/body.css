@@ -1,5 +1,11 @@
 .body-main-container {
     padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .inside-container-body {
@@ -12,7 +18,7 @@
     font-size: 16px;
     color: #9f9f9f;
     text-align: justify;
-    overflow: auto;
+    max-width: 600px;
 }
 .demo-data-body{
     margin-bottom: 15px;
@@ -26,4 +32,5 @@
     box-shadow: 1px 1px 5px grey;
     border: none;
     border-radius: 8px;
+    min-height: 250px;
 }
