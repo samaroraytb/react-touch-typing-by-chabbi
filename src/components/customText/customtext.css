@@ -47,3 +47,27 @@
     cursor: pointer;
 }
 
+.custom-text-button-style:hover{
+    background-color: rgb(66, 108, 66);
+}
+
+.error-message-custom-text{
+    color: red;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.custom-text-go-back-button{
+    padding: 10px 20px 10px 20px;
+    margin: 15px 0px 0px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(120, 201, 238);
+    border: none;
+}
+
+.custom-text-go-back-button:hover{
+    background-color: #f89bc0;
+}

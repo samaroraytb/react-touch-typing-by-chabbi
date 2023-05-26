@@ -32,5 +32,11 @@
     box-shadow: 1px 1px 5px grey;
     border: none;
     border-radius: 8px;
-    min-height: 250px;
+    min-height: 120px;
+}
+.home-message-block{
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+    font-weight: 500;
 }
