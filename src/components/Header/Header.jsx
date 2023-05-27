@@ -16,6 +16,7 @@ const Header = () => {
 
   const clickedOnReset = () => {
     dispachFn(resetData());
+    window.location.reload();
   };
 
   const email = "samaroraytb@gmail.com";
