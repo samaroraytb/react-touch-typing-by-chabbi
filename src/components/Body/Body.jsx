@@ -25,7 +25,9 @@ function Body() {
       }
     }
     else if (event.key === "Backspace"){
-      updateScore({ ...score, matchScore: score.matchScore - 1 });
+      if (score.matchScore > 0){
+        updateScore({ ...score, matchScore: score.matchScore - 1 });
+      }
     }
   };
 
