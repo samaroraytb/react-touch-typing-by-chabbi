@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Header from "../Header/Header";
 import { MdRunningWithErrors } from "react-icons/md";
@@ -11,15 +11,21 @@ function Body() {
 
   const [userTyped, updateTyped] = useState("");
   const [score, updateScore] = useState({ matchScore: 0, nonMatched: 0 });
-  const [accuracy, updateAccuracy] = useState(0)
+  const [accuracy, updateAccuracy] = useState(0);
 
   const keyPressedUser = (event) => {
-    const isMatched = event.key === selectorObject[userTyped.length];
-
-    if (isMatched === true) {
-      updateScore({ ...score, matchScore: score.matchScore + 1 });
-    } else {
-      updateScore({ ...score, nonMatched: score.nonMatched + 1 });
+    const alphanumericPattern = /^[a-zA-Z0-9]$/;
+    console.log(event.key)
+    if (alphanumericPattern.test(event.key)) {
+      const isMatched = event.key === selectorObject[userTyped.length];
+      if (isMatched === true) {
+        updateScore({ ...score, matchScore: score.matchScore + 1 });
+      } else {
+        updateScore({ ...score, nonMatched: score.nonMatched + 1 });
+      }
+    }
+    else if (event.key === "Backspace"){
+      updateScore({ ...score, matchScore: score.matchScore - 1 });
     }
   };
 
@@ -41,10 +47,10 @@ function Body() {
 
   const calculateTheAccuracy = () => {
     const validScore = score.matchScore - score.nonMatched;
-    const calucatePercentage = (validScore/selectorObject.length)*100;
+    const calucatePercentage = (validScore / selectorObject.length) * 100;
     const toFixedTwo = calucatePercentage.toFixed(2);
     updateAccuracy(toFixedTwo);
-  }
+  };
   
   return (
     <>
@@ -54,7 +60,7 @@ function Body() {
           <p className="demo-data-body">{selectorObject}</p>
           <textarea
             id="#userTypedTextID"
-            onKeyPress={keyPressedUser}
+            onKeyDown={keyPressedUser}
             onChange={userTestStart}
             className="body-user-input"
             value={userTyped}
@@ -74,7 +80,13 @@ function Body() {
             </div>
           </div>
           <div className="calculate-accuracy-button-container">
-            <button onClick={calculateTheAccuracy} type="button" className="calculate-accuracy-button">Calculate Accuracy</button>
+            <button
+              onClick={calculateTheAccuracy}
+              type="button"
+              className="calculate-accuracy-button"
+            >
+              Calculate Accuracy
+            </button>
             <div className="body-res-calculate-accuracy-content-container">
               <AiFillCheckCircle className="body-check-icon" size={25} />
               <p className="body-res-text-style">
