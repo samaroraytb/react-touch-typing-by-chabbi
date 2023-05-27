@@ -47,6 +47,7 @@
   .header-mail-icon {
     height: 30px;
     width: 50px;
+    color: white;
   }
   .main-header-container {
     display: flex;
@@ -57,4 +58,10 @@
   .header-title-logo {
     margin-bottom: 20px;
   }
+}
+.header-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
