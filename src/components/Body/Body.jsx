@@ -14,7 +14,7 @@ function Body() {
   const [accuracy, updateAccuracy] = useState(0);
 
   const keyPressedUser = (event) => {
-    const alphanumericPattern = /^[a-zA-Z0-9]$/;
+    const alphanumericPattern = /^[a-zA-Z0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]$/;
     console.log(event.key)
     if (alphanumericPattern.test(event.key)) {
       const isMatched = event.key === selectorObject[userTyped.length];
